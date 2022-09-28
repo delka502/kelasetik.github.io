@@ -11395,7 +11395,7 @@ header.masthead {
   background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: scroll;
+  background-attachment: fixed;
   background-size: cover;
 }
 header.masthead h1, header.masthead .h1 {
@@ -11404,8 +11404,8 @@ header.masthead h1, header.masthead .h1 {
 @media (min-width: 992px) {
   header.masthead {
     height: 100vh;
-    min-height: 40rem;
-    padding-top: 4.5rem;
+    min-height: 50rem;
+    padding-top: 3rem;
     padding-bottom: 0;
   }
   header.masthead p {
@@ -11455,4 +11455,13 @@ header.masthead h1, header.masthead .h1 {
 }
 #portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
   opacity: 1;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 10;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 10;
+  }
 }
